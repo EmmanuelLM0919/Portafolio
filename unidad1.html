@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 1: Servicios Web - Portafolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+
+        .blog-content h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: #667eea;
+            font-weight: 700;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .blog-content h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #764ba2;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+
+        /* Ajuste para las cards de Bootstrap dentro del blog */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-light bg-white shadow-sm sticky-top">
+        <div class="container py-2">
+            <a class="navbar-brand d-flex align-items-center text-decoration-none" href="index.html">
+                <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-2"
+                    style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    PW
+                </div>
+                <span class="fw-semibold text-primary d-none d-md-inline">
+                    Portafolio de Desarrollo Web
+                </span>
+            </a>
+
+        </div>
+    </nav>
+
+    <main class="py-5">
+        <div class="container">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Unidad 1: Servicios Web</li>
+                </ol>
+            </nav>
+
+            <article class="bg-white shadow-sm rounded-3 p-4 p-md-5">
+
+                <header class="text-center mb-5">
+                    <div class="rounded-circle bg-primary bg-opacity-10 d-inline-flex align-items-center justify-content-center mb-4"
+                        style="width: 100px; height: 100px;">
+                        <i class="bi bi-cloud-check text-primary" style="font-size: 3rem;"></i>
+                    </div>
+                    <h1 class="display-5 fw-bold text-primary mb-3">Introducción al Desarrollo Web Orientado a Servicios
+                    </h1>
+                    <p class="lead text-muted">Conceptos fundamentales, Arquitectura SOA y Estándares Web.</p>
+                </header>
+
+                <div class="blog-content">
+
+                    <section>
+                        <h2>1. Paradigma del Desarrollo Orientado a Servicios</h2>
+                        <p>
+                            El desarrollo moderno se basa en la creación de aplicaciones distribuidas que colaboran
+                            entre sí.
+                            Este paradigma permite que sistemas dispares (construidos en diferentes lenguajes) se
+                            comuniquen a través de la red.
+                        </p>
+
+                        <h3><i class="bi bi-cloud me-2"></i>Servicios en la Nube</h3>
+                        <p>Para implementar estos servicios, es fundamental distinguir los modelos de entrega en la
+                            nube:</p>
+
+                        <div class="row g-4 mt-2">
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm bg-light card-hover">
+                                    <div class="card-body text-center">
+                                        <h5 class="fw-bold text-primary">IaaS</h5>
+                                        <span class="badge bg-secondary mb-2">Infraestructura</span>
+                                        <p class="small">Alquiler de hardware virtual (servidores, redes). Tú
+                                            administras el sistema operativo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm bg-light card-hover">
+                                    <div class="card-body text-center">
+                                        <h5 class="fw-bold text-success">PaaS</h5>
+                                        <span class="badge bg-success mb-2">Plataforma</span>
+                                        <p class="small">Entorno listo para desarrollar y desplegar aplicaciones sin
+                                            gestionar servidores.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0 shadow-sm bg-light card-hover">
+                                    <div class="card-body text-center">
+                                        <h5 class="fw-bold text-info">SaaS</h5>
+                                        <span class="badge bg-info text-dark mb-2">Software</span>
+                                        <p class="small">Aplicaciones finales listas para usar a través del navegador
+                                            (ej. Gmail, Office 365).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="highlight-box mt-4">
+                            <h4 class="fw-bold h5"><i class="bi bi-layers me-2"></i>Aplicaciones Web Híbridas (Mashups)
+                            </h4>
+                            <p class="mb-0">
+                                Un <strong>Mashup</strong> es una aplicación web que utiliza contenido de más de una
+                                fuente para crear un servicio nuevo.
+                                <br><em>Ejemplo:</em> Una web que toma datos de delincuencia de una API gubernamental y
+                                los muestra sobre Google Maps.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>2. Arquitectura Orientada a Servicios (SOA)</h2>
+                        <p>
+                            <strong>SOA</strong> es un estilo arquitectónico donde las funcionalidades de software se
+                            agrupan en "servicios"
+                            lógicos e independientes. Cada servicio tiene un propósito específico y se comunica mediante
+                            protocolos estándar.
+                        </p>
+
+                        <h3>Principios de Diseño</h3>
+                        <ul class="list-group list-group-flush mb-4">
+                            <li class="list-group-item"><i
+                                    class="bi bi-check-circle-fill text-success me-2"></i><strong>Reutilización:</strong>
+                                El servicio puede ser usado por múltiples aplicaciones.</li>
+                            <li class="list-group-item"><i
+                                    class="bi bi-check-circle-fill text-success me-2"></i><strong>Bajo
+                                    Acoplamiento:</strong> Los servicios son independientes; cambiar uno no rompe a los
+                                demás.</li>
+                            <li class="list-group-item"><i
+                                    class="bi bi-check-circle-fill text-success me-2"></i><strong>Abstracción:</strong>
+                                El usuario del servicio no necesita saber la lógica interna, solo cómo usarlo.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>3. Estándares y Protocolos (Glosario)</h2>
+                        <p>Para garantizar la interoperabilidad, SOA depende de estándares estrictos. A continuación se
+                            definen los más importantes:</p>
+
+                        <div class="accordion shadow-sm" id="accordionStandards">
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne">
+                                        <strong>XML (eXtensible Markup Language)</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionStandards">
+                                    <div class="accordion-body">
+                                        Es el lenguaje estándar para el intercambio de datos. Permite estructurar la
+                                        información de forma legible tanto para humanos como para máquinas. Es la base
+                                        sobre la que se construyen SOAP y WSDL.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo">
+                                        <strong>SOAP (Simple Object Access Protocol)</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionStandards">
+                                    <div class="accordion-body">
+                                        Es un protocolo basado en XML para intercambiar información. Define las reglas
+                                        de "cómo" se envía el mensaje, incluyendo seguridad y manejo de errores. Es muy
+                                        riguroso y seguro.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree">
+                                        <strong>WSDL (Web Services Description Language)</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionStandards">
+                                    <div class="accordion-body">
+                                        Es un documento XML que funciona como el "manual de instrucciones" del servicio.
+                                        Describe qué funciones están disponibles, qué datos se deben enviar y qué
+                                        respuesta se recibirá.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour">
+                                        <strong>UDDI (Universal Description, Discovery and Integration)</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionStandards">
+                                    <div class="accordion-body">
+                                        Es como un "directorio telefónico" para servicios web. Permite a las empresas
+                                        publicar sus servicios (WSDL) en un registro para que otros desarrolladores
+                                        puedan encontrarlos y conectarse.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive">
+                                        <strong>REST (Representational State Transfer)</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionStandards">
+                                    <div class="accordion-body">
+                                        A diferencia de SOAP, REST no es un protocolo, sino un estilo de arquitectura.
+                                        Utiliza los métodos estándar de HTTP (GET, POST, PUT, DELETE) y suele ser más
+                                        ligero y rápido, prefiriendo JSON sobre XML.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="text-center mt-5 pt-4 border-top">
+                    <a href="index.html" class="btn btn-outline-primary rounded-pill px-4">
+                        <i class="bi bi-arrow-left me-2"></i>Volver al Inicio
+                    </a>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <footer class="bg-white shadow-sm mt-5 py-4 border-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 text-muted small">
+                        &copy; 2026 Emmanuel Leyva & Alondra Saucedo.<br>
+                        Desarrollo de Aplicaciones Web - Unidad 1
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-secondary me-3"><i class="bi bi-github fs-5"></i></a>
+                    <a href="#" class="text-secondary"><i class="bi bi-envelope fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

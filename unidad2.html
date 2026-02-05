@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 2: Tecnologías Web - Portafolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        /* --- ESTILOS DEL PORTAFOLIO --- */
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+
+        .blog-content h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: #198754;
+            /* Verde (Success) para Unidad 2 */
+            font-weight: 700;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .img-evidencia {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .img-evidencia:hover {
+            transform: scale(1.02);
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #d1e7dd;
+            /* Fondo verde suave al abrir */
+            color: #0f5132;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-light bg-white shadow-sm sticky-top">
+        <div class="container py-2">
+            <a class="navbar-brand d-flex align-items-center text-decoration-none" href="index.html">
+                <div class="rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-2"
+                    style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    PW
+                </div>
+                <span class="fw-semibold text-primary d-none d-md-inline">
+                    Portafolio de Desarrollo Web
+                </span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="py-5">
+        <div class="container">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Unidad 2: Tecnologías Web</li>
+                </ol>
+            </nav>
+
+            <article class="bg-white shadow-sm rounded-3 p-4 p-md-5">
+
+                <header class="text-center mb-5">
+                    <div class="rounded-circle bg-success bg-opacity-10 d-inline-flex align-items-center justify-content-center mb-4"
+                        style="width: 100px; height: 100px;">
+                        <i class="bi bi-globe text-success" style="font-size: 3rem;"></i>
+                    </div>
+                    <h1 class="display-5 fw-bold text-success mb-3">
+                        Unidad 2: Tecnologías y Plataformas
+                    </h1>
+                    <p class="lead text-muted">Exploración de servicios de geolocalización, redes, datos y medios
+                        digitales.</p>
+                </header>
+
+                <div class="blog-content">
+
+                    <section>
+                        <h2>Temas de la Unidad</h2>
+                        <p class="mb-4">
+                            Desglose de las evidencias prácticas y teóricas sobre las tecnologías que impulsan la web
+                            moderna.
+                        </p>
+
+                        <div class="accordion shadow-sm" id="accordionTemas">
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne">
+                                        <strong>1. Geolocalización</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionTemas">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-7">
+                                                <h5 class="text-success fw-bold mb-3">Concepto:</h5>
+                                                <p>
+                                                    La geolocalización permite determinar la ubicación geográfica real
+                                                    de un dispositivo conectado a internet.
+                                                    En el desarrollo web, utilizamos la API de Geolocalización de HTML5
+                                                    o servicios de terceros (como Google Maps API) para obtener
+                                                    coordenadas (latitud y longitud) y ofrecer servicios basados en
+                                                    ubicación.
+                                                </p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <img src="img/imagen1.png" class="img-evidencia" alt="Geolocalización">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo">
+                                        <strong>2. Redes Sociales</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionTemas">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-7">
+                                                <h5 class="text-success fw-bold mb-3">Concepto:</h5>
+                                                <p>
+                                                    Las redes sociales son estructuras formadas en Internet por personas
+                                                    u organizaciones que se conectan a partir de intereses o valores
+                                                    comunes.
+                                                    Desde el punto de vista del desarrollo, implican la integración de
+                                                    APIs (Facebook Graph API, Twitter API) para autenticación (Login
+                                                    social) o para compartir contenido directamente desde la aplicación.
+                                                </p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <img src="img/imagen2.png" class="img-evidencia" alt="Redes Sociales">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree">
+                                        <strong>3. Bases de Datos</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionTemas">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-7">
+                                                <h5 class="text-success fw-bold mb-3">Concepto:</h5>
+                                                <p>
+                                                    Una base de datos es una recopilación organizada de información
+                                                    estructurada, almacenada electrónicamente.
+                                                    Son fundamentales para aplicaciones dinámicas. Pueden ser
+                                                    Relacionales (SQL como MySQL, PostgreSQL) o No Relacionales (NoSQL
+                                                    como MongoDB), dependiendo de la estructura de los datos requeridos
+                                                    por la app.
+                                                </p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <img src="img/imagen3.png" class="img-evidencia" alt="Bases de Datos">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour">
+                                        <strong>4. Plataformas On-Line</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionTemas">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-7">
+                                                <h5 class="text-success fw-bold mb-3">Concepto:</h5>
+                                                <p>
+                                                    Las plataformas en línea son entornos digitales que facilitan la
+                                                    interacción entre usuarios y servicios.
+                                                    Incluyen sistemas de gestión de aprendizaje (LMS como Moodle),
+                                                    comercio electrónico (e-commerce), y herramientas de colaboración en
+                                                    la nube (SaaS). Permiten ejecutar tareas complejas directamente
+                                                    desde el navegador.
+                                                </p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <img src="img/imagen4.png" class="img-evidencia"
+                                                    alt="Plataformas Online">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive">
+                                        <strong>5. Plataformas Streaming</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionTemas">
+                                    <div class="accordion-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-7">
+                                                <h5 class="text-success fw-bold mb-3">Concepto:</h5>
+                                                <p>
+                                                    El streaming es la tecnología que permite transmitir archivos de
+                                                    audio y video en un flujo continuo a través de una conexión a
+                                                    internet, sin necesidad de descargarlos completamente.
+                                                    Involucra protocolos como HLS o DASH y requiere servidores
+                                                    optimizados para la entrega de contenido multimedia en tiempo real.
+                                                </p>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <img src="img/imagen5.png" class="img-evidencia" alt="Streaming">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+                <div class="text-center mt-5 pt-4 border-top">
+                    <a href="index.html" class="btn btn-outline-success rounded-pill px-4">
+                        <i class="bi bi-arrow-left me-2"></i>Volver al Inicio
+                    </a>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <footer class="bg-white shadow-sm mt-5 py-4 border-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 text-muted small">
+                        &copy; 2026 Emmanuel Leyva & Alondra Saucedo.<br>
+                        Desarrollo de Aplicaciones Web - Unidad 2
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-secondary me-3"><i class="bi bi-github fs-5"></i></a>
+                    <a href="#" class="text-secondary"><i class="bi bi-envelope fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
